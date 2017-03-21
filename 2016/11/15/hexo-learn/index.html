@@ -1,0 +1,935 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="npm,hexo," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="本站点采用的Hexo主题是Next主题，使用该主题的原因是：该博客整体布局效果个人很喜欢，而且配套的文档资料非常好，文档资料可直接参考官网链接。ps：建议下载主题的稳定版本，可以避免很多没必要的麻烦。
+本文主要介绍以下内容：使用next主题对next的主题风格、菜单、头像和代码主题设置添加标签、分类和关于我页面在next主题中引入第三方服务，如评论功能，分享功能，站点内容搜索功能和数据统计分析功能">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo的Next主题配置">
+<meta property="og:url" content="http://yoursite.com/2016/11/15/hexo-learn/index.html">
+<meta property="og:site_name" content="Syd192">
+<meta property="og:description" content="本站点采用的Hexo主题是Next主题，使用该主题的原因是：该博客整体布局效果个人很喜欢，而且配套的文档资料非常好，文档资料可直接参考官网链接。ps：建议下载主题的稳定版本，可以避免很多没必要的麻烦。
+本文主要介绍以下内容：使用next主题对next的主题风格、菜单、头像和代码主题设置添加标签、分类和关于我页面在next主题中引入第三方服务，如评论功能，分享功能，站点内容搜索功能和数据统计分析功能">
+<meta property="og:image" content="http://yoursite.com/photo/20161115/1.png">
+<meta property="og:image" content="http://yoursite.com/photo/20161115/2.png">
+<meta property="og:image" content="http://yoursite.com/photo/20161115/3.png">
+<meta property="og:image" content="http://yoursite.com/photo/20161115/11.png">
+<meta property="og:image" content="http://yoursite.com/photo/20161115/4.png">
+<meta property="og:image" content="http://yoursite.com/photo/20161115/5.png">
+<meta property="og:image" content="http://yoursite.com/photo/20161115/6.png">
+<meta property="og:image" content="http://yoursite.com/photo/20161115/7.png">
+<meta property="og:image" content="http://yoursite.com/photo/20161115/8.png">
+<meta property="og:image" content="http://yoursite.com/photo/20161115/9.png">
+<meta property="og:image" content="http://yoursite.com/photo/20161115/10.png">
+<meta property="og:updated_time" content="2017-03-21T15:14:19.931Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo的Next主题配置">
+<meta name="twitter:description" content="本站点采用的Hexo主题是Next主题，使用该主题的原因是：该博客整体布局效果个人很喜欢，而且配套的文档资料非常好，文档资料可直接参考官网链接。ps：建议下载主题的稳定版本，可以避免很多没必要的麻烦。
+本文主要介绍以下内容：使用next主题对next的主题风格、菜单、头像和代码主题设置添加标签、分类和关于我页面在next主题中引入第三方服务，如评论功能，分享功能，站点内容搜索功能和数据统计分析功能">
+<meta name="twitter:image" content="http://yoursite.com/photo/20161115/1.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> Hexo的Next主题配置 | Syd192 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?2ea0b2674aabe3e58ecfffb3d9b18007";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=59475160";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Syd192</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Talk is Cheap</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Hexo的Next主题配置
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-15T00:00:00+08:00" content="2016-11-15">
+              2016-11-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/搭建博客/" itemprop="url" rel="index">
+                    <span itemprop="name">搭建博客</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/15/hexo-learn/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/15/hexo-learn/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本站点采用的Hexo主题是<a href="https://github.com/iissnan/hexo-theme-next/" target="_blank" rel="external">Next主题</a>，使用该主题的原因是：该博客整体布局效果个人很喜欢，而且配套的文档资料非常好，文档资料可直接参考<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">官网链接</a>。ps：建议下载主题的稳定版本，可以避免很多没必要的麻烦。</p>
+<p>本文主要介绍以下内容：<br>使用next主题<br>对next的主题风格、菜单、头像和代码主题设置<br>添加标签、分类和关于我页面<br>在next主题中引入第三方服务，如评论功能，分享功能，站点内容搜索功能和数据统计分析功能。<br><a id="more"></a></p>
+<h1 id="使用Next主题"><a href="#使用Next主题" class="headerlink" title="使用Next主题"></a>使用Next主题</h1><ul>
+<li>在<a href="https://github.com/iissnan/hexo-theme-next/releases" target="_blank" rel="external">这里</a>Downloads Next主题代码</li>
+<li>将下载的代码放在<code>myBlog/next</code>目录下</li>
+<li>设置站点<code>myBlog/_config.yml</code>的theme字段值为next</li>
+<li>生成新页面<code>hexo g</code></li>
+<li>开启服务<code>hexo s --debug</code></li>
+<li>发布代码<code>hexo d</code></li>
+</ul>
+<p>注：此时登录网站，发现是空白的，打开控制台，提示很多vendors目录下的文件404，解决办法是将next主题下即<code>myBlog/themes/next/source</code>下的vendors目录名改为lib，并修改<code>myBlog/themes/next/_config.yml</code>的<code>_internal: vendors</code>改为<code>_internal: lib</code>。</p>
+<p><strong>参考</strong>：<a href="https://github.com/iissnan/hexo-theme-next/issues/1214" target="_blank" rel="external">iissnan的回答</a></p>
+<h1 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h1><h2 id="主题风格设定"><a href="#主题风格设定" class="headerlink" title="主题风格设定"></a>主题风格设定</h2><p>通过修改next主题下的<code>_config.yml</code>的scheme字段，配置不同的风格。<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Schemes</span></div><div class="line"><span class="attr">scheme:</span> <span class="string">Muse</span></div><div class="line"><span class="comment">#scheme: Mist</span></div><div class="line"><span class="comment">#scheme: Pisces</span></div></pre></td></tr></table></figure></p>
+<p>本站点使用的是默认的Muse，显示效果如下：<br><img src="/photo/20161115/1.png" alt=""></p>
+<h2 id="给Next主题添加背景"><a href="#给Next主题添加背景" class="headerlink" title="给Next主题添加背景"></a>给Next主题添加背景</h2><h3 id="添加网页背景"><a href="#添加网页背景" class="headerlink" title="添加网页背景"></a>添加网页背景</h3><ol>
+<li><p>将背景图<code>background.jpg</code>放到<code>myBlog\themes\next\source\images</code>文件夹下</p>
+</li>
+<li><p>在<code>myBlog\themes\next\source\css\_custom\custom.syl</code>文件中添加下面代码：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span> &#123; </div><div class="line">    <span class="attribute">background</span>:<span class="built_in">url</span>(/images/background.jpg);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>注：</p>
+<p>​    在上面代码中添加<code>background-repeat: no-repeat;</code>来避免图片浮动。</p>
+<h3 id="标题栏-header-inner添加背景"><a href="#标题栏-header-inner添加背景" class="headerlink" title="标题栏 .header-inner添加背景"></a>标题栏 .header-inner添加背景</h3><ol>
+<li><p>将背景图<code>header.jpg</code>放到<code>myBlog\themes\next\source\images</code>文件夹下</p>
+</li>
+<li><p>在<code>myBlog\themes\next\source\css\_common\components\header\header.syl</code>文件中添加下面代码：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.header</span> &#123; </div><div class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(/images/header.jpg);</div><div class="line">    <span class="attribute">background-size</span>: <span class="number">100%</span> <span class="number">100%</span>;</div><div class="line"> &#125;</div><div class="line"> <span class="selector-class">.header-inner</span> &#123; </div><div class="line">    <span class="attribute">position</span>: relative; </div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="菜单设置"><a href="#菜单设置" class="headerlink" title="菜单设置"></a>菜单设置</h2><p>通过修改next主题下的<code>_config.yml</code>的menu字段，选定显示的菜单项。<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="attr">menu:</span></div><div class="line"><span class="attr">  home:</span> <span class="string">/</span></div><div class="line"><span class="attr">  categories:</span> <span class="string">/categories</span></div><div class="line"><span class="attr">  about:</span> <span class="string">/about</span></div><div class="line"><span class="attr">  archives:</span> <span class="string">/archives</span></div><div class="line"><span class="attr">  tags:</span> <span class="string">/tags</span></div><div class="line">  <span class="comment">#commonweal: /404.html</span></div></pre></td></tr></table></figure></p>
+<p>其中，home代表主页，categories代表分类页，about代表关于页面，archives代表归档页，commonweal代表404页面（page not found时候显示的页面）。<br>菜单项文本修改是在对next主题下的language文件夹下的文件进行修改，若当前语言是简体中文，直接修改<code>language/zh-Hans.yml</code>里的对应字段即可。<br>本站点显示主页，分类页，关于页面和归档页。</p>
+<h2 id="头像设置"><a href="#头像设置" class="headerlink" title="头像设置"></a>头像设置</h2><p>在主题下的<code>source/images/</code>下放置头像文件<code>avatar.gif</code>即可。</p>
+<h2 id="设置文章代码主题"><a href="#设置文章代码主题" class="headerlink" title="设置文章代码主题"></a>设置文章代码主题</h2><p>Next主题总共支持5种主题，默认主题是白色的normal。通过修改next主题下的<code>_config.yml</code>的highlight字段，来设置代码主题。<br>本站点使用的是night主题。即令highlight为night。</p>
+<h2 id="添加标签页面"><a href="#添加标签页面" class="headerlink" title="添加标签页面"></a>添加标签页面</h2><p>前面通过修改next主题下的<code>_config.yml</code>文件中的menu选项，可以在主页面的菜单栏添加标签选项，但是此时点击标签，跳转的页面会显示page not found。<br>添加标签页面的具体方法是：</p>
+<ul>
+<li>新建页面<br>输入如下命令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> myB<span class="built_in">log</span></div><div class="line">$ hexo new page tags</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>输入命令后，在<code>myBlog/source</code>下会新生成一个新的文件夹<code>tags</code>，在该文件夹下会有一个<code>index.md</code>文件。</p>
+<ul>
+<li><p>设置页面类型<br>在上步新生成的<code>myBlog/source/tags/index.md</code>中添加<code>type: &quot;tags&quot;</code>，<code>index.md</code>文件内容如下：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: tags</div><div class="line">date: 2016-11-15 19:10:05</div><div class="line"><span class="section">type: "tags"</span></div><div class="line">---</div></pre></td></tr></table></figure>
+</li>
+<li><p>设置具体文章的tags<br>当要为某一篇文章添加标签，只需在<code>myBlog/source/_post</code>目录下的具体文章的tags中添加标签即可，如：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: 基于Hexo和Github搭建博客</div><div class="line">date: 2016-11-09</div><div class="line">tags: [npm, hexo, github]</div><div class="line"><span class="section">categories: 搭建博客</span></div><div class="line">---</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>本站添加为标签后的效果如下：<br><img src="/photo/20161115/2.png" alt=""></p>
+<h2 id="添加分类页面"><a href="#添加分类页面" class="headerlink" title="添加分类页面"></a>添加分类页面</h2><p>步骤与添加标签页面类似，具体如下：</p>
+<ul>
+<li>新建页面<br>输入如下命令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> myB<span class="built_in">log</span></div><div class="line">$ hexo new page categories</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>输入命令后，在<code>myBlog/source</code>下会新生成一个新的文件夹<code>categories</code>，在该文件夹下会有一个<code>index.md</code>文件。</p>
+<ul>
+<li><p>设置页面类型<br>在上步新生成的<code>myBlog/source/categories/index.md</code>中添加<code>type: &quot;categories&quot;</code>，<code>index.md</code>文件内容如下：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: categories</div><div class="line">date: 2016-11-15 19:11:13</div><div class="line"><span class="section">type: "categories"</span></div><div class="line">---</div></pre></td></tr></table></figure>
+</li>
+<li><p>设置具体文章的categories<br>当要为某一篇文章添加分类，只需在<code>myBlog/source/_post</code>目录下的具体文章的categories中添加分类即可，如：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: 基于Hexo和Github搭建博客</div><div class="line">date: 2016-11-09</div><div class="line">tags: [npm, hexo, github]</div><div class="line"><span class="section">categories: 搭建博客</span></div><div class="line">---</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>本站添加为标签后的效果如下：<br><img src="/photo/20161115/3.png" alt=""></p>
+<h2 id="添加关于我页面"><a href="#添加关于我页面" class="headerlink" title="添加关于我页面"></a>添加关于我页面</h2><p>步骤与添加标签页面类似，具体如下：</p>
+<ul>
+<li>新建页面<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> myB<span class="built_in">log</span></div><div class="line">$ hexo new page about</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>输入命令后，在<code>myBlog/source</code>下会新生成一个新的文件夹<code>about</code>，在该文件夹下会有一个<code>index.md</code>文件。</p>
+<ul>
+<li>修改<code>about/index.md</code><br>本站点index.md如下：<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: about</div><div class="line"><span class="section">date: 2016-11-15 19:08:50</span></div><div class="line">---</div><div class="line"></div><div class="line"><span class="section">## 关于我</span></div><div class="line"></div><div class="line">一只学习前端的小菜鸟，欢迎分享知识。</div><div class="line"></div><div class="line">From XDU</div><div class="line"></div><div class="line">QQ：847909475</div><div class="line">Email: 847909475@qq.com</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>效果如下：<br><img src="/photo/20161115/11.png" alt=""></p>
+<h1 id="引入第三方服务"><a href="#引入第三方服务" class="headerlink" title="引入第三方服务"></a>引入第三方服务</h1><h2 id="加入评论功能"><a href="#加入评论功能" class="headerlink" title="加入评论功能"></a>加入评论功能</h2><p>本站点使用的是<a href="http://duoshuo.com/" target="_blank" rel="external">多说</a>。加入评论功能的步骤如下：</p>
+<ul>
+<li>登录<a href="http://duoshuo.com/" target="_blank" rel="external">多说</a>，填写表单，创建站点<br><img src="/photo/20161115/4.png" alt=""><br>图片中红框圈中的框中内容就是下一步<code>duoshuo_shortname</code>字段的值</li>
+<li>添加duoshuo_shortname<br>在站点的<code>myBlog/_config.yml</code>中加入<code>duoshuo_shortname</code>字段，值为第一步红框里的内容<br>加入评论后效果如下：<br><img src="/photo/20161115/5.png" alt=""></li>
+</ul>
+<h2 id="加入分享功能"><a href="#加入分享功能" class="headerlink" title="加入分享功能"></a>加入分享功能</h2><p>本站点使用的是<a href="http://duoshuo.com" target="_blank" rel="external">多说</a>。加入分享功能的步骤如下：<br>在站点的<code>myBlog/_config.yml</code>中加入<code>duoshuo_share</code>字段，值为true。<br>加入分享后效果如下：<br><img src="/photo/20161115/6.png" alt=""></p>
+<h2 id="加入站点内容搜索功能"><a href="#加入站点内容搜索功能" class="headerlink" title="加入站点内容搜索功能"></a>加入站点内容搜索功能</h2><p>本站点使用的是Local Search。加入站点内容搜索功能步骤如下：</p>
+<ul>
+<li>安装hexo-generator-searchdb<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-generator-searchdb --save</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>注意：安装时应在站点根目录下，即myBlog目录下</p>
+<ul>
+<li>添加search字段<br>在站点<code>myBlog/_config.yml</code>中添加search字段，如下：<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="attr">search:</span></div><div class="line"><span class="attr">  path:</span> <span class="string">search.xml</span></div><div class="line"><span class="attr">  field:</span> <span class="string">post</span></div><div class="line"><span class="attr">  format:</span> <span class="string">html</span></div><div class="line"><span class="attr">  limit:</span> <span class="number">10000</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>效果如下：<br><img src="/photo/20161115/7.png" alt=""></p>
+<h2 id="加入数据统计与分析功能"><a href="#加入数据统计与分析功能" class="headerlink" title="加入数据统计与分析功能"></a>加入数据统计与分析功能</h2><p>本站点使用的是<a href="http://tongji.baidu.com/" target="_blank" rel="external">百度统计</a>。加入数据统计与分析功能步骤如下：</p>
+<ul>
+<li>注册站长账号并登陆<br>在<a href="http://tongji.baidu.com/web/register" target="_blank" rel="external">这里</a>注册站长账号，并填写信息，网站域名和网站首页以下图为例来填写，注册完成后并登陆。<br><img src="/photo/20161115/8.png" alt=""></li>
+<li>在跳转的页面中会显示下图，复制hm.js后的id值<br><img src="/photo/20161115/9.png" alt=""></li>
+<li>添加baidu_analytics字段<br>在站点<code>myBlog/_config.yml</code>中添加search字段，值为上步复制的id值<br>至此，该功能已成功加入，大约过20min后在<a href="http://tongji.baidu.com" target="_blank" rel="external">百度统计</a>上可以看到站点的访问情况，如下图：<br><img src="/photo/20161115/10.png" alt=""></li>
+</ul>
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul>
+<li><a href="https://github.com/iissnan/hexo-theme-next/" target="_blank" rel="external">hexo-theme-next</a></li>
+<li><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">Next使用文档</a></li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/npm/" rel="tag">#npm</a>
+          
+            <a href="/tags/hexo/" rel="tag">#hexo</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/11/vue-learn/" rel="next" title="Vue概念及常见命令介绍">
+                <i class="fa fa-chevron-left"></i> Vue概念及常见命令介绍
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/21/es6-learn/" rel="prev" title="ECMAScript6学习">
+                ECMAScript6学习 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/11/15/hexo-learn/"
+     data-title="Hexo的Next主题配置"
+     data-content=""
+     data-url="http://yoursite.com/2016/11/15/hexo-learn/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/11/15/hexo-learn/"
+           data-title="Hexo的Next主题配置" data-url="http://yoursite.com/2016/11/15/hexo-learn/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Suyd" />
+          <p class="site-author-name" itemprop="name">Suyd</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#使用Next主题"><span class="nav-number">1.</span> <span class="nav-text">使用Next主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主题配置"><span class="nav-number">2.</span> <span class="nav-text">主题配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#主题风格设定"><span class="nav-number">2.1.</span> <span class="nav-text">主题风格设定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给Next主题添加背景"><span class="nav-number">2.2.</span> <span class="nav-text">给Next主题添加背景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加网页背景"><span class="nav-number">2.2.1.</span> <span class="nav-text">添加网页背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标题栏-header-inner添加背景"><span class="nav-number">2.2.2.</span> <span class="nav-text">标题栏 .header-inner添加背景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#菜单设置"><span class="nav-number">2.3.</span> <span class="nav-text">菜单设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#头像设置"><span class="nav-number">2.4.</span> <span class="nav-text">头像设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置文章代码主题"><span class="nav-number">2.5.</span> <span class="nav-text">设置文章代码主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加标签页面"><span class="nav-number">2.6.</span> <span class="nav-text">添加标签页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加分类页面"><span class="nav-number">2.7.</span> <span class="nav-text">添加分类页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加关于我页面"><span class="nav-number">2.8.</span> <span class="nav-text">添加关于我页面</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引入第三方服务"><span class="nav-number">3.</span> <span class="nav-text">引入第三方服务</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#加入评论功能"><span class="nav-number">3.1.</span> <span class="nav-text">加入评论功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加入分享功能"><span class="nav-number">3.2.</span> <span class="nav-text">加入分享功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加入站点内容搜索功能"><span class="nav-number">3.3.</span> <span class="nav-text">加入站点内容搜索功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加入数据统计与分析功能"><span class="nav-number">3.4.</span> <span class="nav-text">加入数据统计与分析功能</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">4.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Suyd</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"myBlogSuyd"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+  
+
+  
+
+  
+
+</body>
+</html>

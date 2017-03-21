@@ -1,0 +1,1313 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="css," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="介绍CSS常用的相关属性，包括：背景、边框、文本、字体、外边距、内边距、尺寸和定位等。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用CSS属性">
+<meta property="og:url" content="http://yoursite.com/2016/11/28/css属性/index.html">
+<meta property="og:site_name" content="Syd192">
+<meta property="og:description" content="介绍CSS常用的相关属性，包括：背景、边框、文本、字体、外边距、内边距、尺寸和定位等。">
+<meta property="og:image" content="http://yoursite.com/photo/20161128/1.png">
+<meta property="og:image" content="http://yoursite.com/photo/20161128/2.png">
+<meta property="og:image" content="http://yoursite.com/photo/20161128/3.png">
+<meta property="og:image" content="http://yoursite.com/photo/20161128/4.png">
+<meta property="og:image" content="http://yoursite.com/photo/20161128/5.png">
+<meta property="og:image" content="http://yoursite.com/photo/20161128/6.png">
+<meta property="og:updated_time" content="2017-03-21T13:01:08.278Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="常用CSS属性">
+<meta name="twitter:description" content="介绍CSS常用的相关属性，包括：背景、边框、文本、字体、外边距、内边距、尺寸和定位等。">
+<meta name="twitter:image" content="http://yoursite.com/photo/20161128/1.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 常用CSS属性 | Syd192 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?2ea0b2674aabe3e58ecfffb3d9b18007";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=59475160";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Syd192</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Talk is Cheap</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                常用CSS属性
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-28T00:00:00+08:00" content="2016-11-28">
+              2016-11-28
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Web前端基础/" itemprop="url" rel="index">
+                    <span itemprop="name">Web前端基础</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/28/css属性/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/28/css属性/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>介绍CSS常用的相关属性，包括：背景、边框、文本、字体、外边距、内边距、尺寸和定位等。<br><a id="more"></a></p>
+<h1 id="CSS背景属性（background）"><a href="#CSS背景属性（background）" class="headerlink" title="CSS背景属性（background）"></a>CSS背景属性（background）</h1><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>可能值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>background</td>
+<td>在一个声明中设置所有背景属性</td>
+<td></td>
+</tr>
+<tr>
+<td>background-attachment</td>
+<td>设置背景图像是否随着页面的其余部分滚动</td>
+<td>scroll(默认值)；fixed；inherit</td>
+</tr>
+<tr>
+<td>background-color</td>
+<td>设置元素背景色</td>
+<td>yellow；#00ff00；rgb(255, 0, 255)</td>
+</tr>
+<tr>
+<td>background-image</td>
+<td>设置元素背景图像</td>
+<td>none(默认值)；url(‘1.jpg’)；inherit</td>
+</tr>
+<tr>
+<td>background-position</td>
+<td>设置背景图像开始的位置</td>
+<td>top left；x% y%；xpos ypos；</td>
+</tr>
+<tr>
+<td>background-repeat</td>
+<td>设置背景图像如何重复显示</td>
+<td>repeat(默认值)；repeat-x；repeat-y；no-repeat；inherit</td>
+</tr>
+<tr>
+<td>background-clip</td>
+<td>规定背景的绘制区域</td>
+<td>border-box(默认值)；padding-box；content-box</td>
+</tr>
+<tr>
+<td>background-origin</td>
+<td>规定背景图片相对什么来定位</td>
+<td>padding-box(默认值)；border-box；content-box</td>
+</tr>
+<tr>
+<td>background-size</td>
+<td>设置背景图片的尺寸</td>
+<td>100px；50%；cover；contain</td>
+</tr>
+</tbody>
+</table>
+<p>注：</p>
+<ul>
+<li>background：在一个声明中设置所有背景属性，可以设置如下属性：<ul>
+<li>background-color</li>
+<li>background-position</li>
+<li>background-size</li>
+<li>background-repeat</li>
+<li>background-origin</li>
+<li>background-clip</li>
+<li>background-attachment</li>
+<li>background-image</li>
+</ul>
+</li>
+<li>background-attachment：<ul>
+<li>fixed：背景图像相对于窗体固定</li>
+<li>scroll：背景图像相对于元素固定，也就是说当元素内容滚动时背景图像不会跟着滚动，因为背景图像总是要跟着元素本身。但会随元素的祖先元素或窗体一起滚动</li>
+</ul>
+</li>
+<li><p>background-clip：</p>
+<ul>
+<li>border-box：背景绘制到边框</li>
+<li>padding-box：背景绘制到内边距</li>
+<li>content-box：背景绘制到内容域</li>
+<li><p>如，css代码：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span>&#123;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">25px</span>; </div><div class="line">  <span class="attribute">border</span>: <span class="number">10px</span> dotted <span class="number">#000000</span>; </div><div class="line">  <span class="attribute">background-color</span>: yellow; </div><div class="line">  <span class="attribute">background-clip</span>: border-box;<span class="comment">/*border-box|padding-box|content-box*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>border-box显示效果如下：<br><img src="/photo/20161128/1.png" alt=""><br>padding-box显示效果如下：<br><img src="/photo/20161128/2.png" alt=""><br>content-box显示效果如下：<br><img src="/photo/20161128/3.png" alt=""></p>
+</li>
+</ul>
+</li>
+<li><p>background-origin：</p>
+<ul>
+<li><p>与background-clip的三个属性取值类似，如，css代码：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span>&#123;</div><div class="line">	<span class="attribute">padding</span>:<span class="number">25px</span>;</div><div class="line">	<span class="attribute">border</span>:<span class="number">10px</span> dotted <span class="number">#000000</span>;</div><div class="line">	<span class="attribute">background-image</span>:<span class="built_in">url</span>(<span class="string">'/i/eg_smile.gif'</span>);</div><div class="line">	<span class="attribute">background-origin</span>:content-box;</div><div class="line">	<span class="attribute">background-repeat</span>:no-repeat;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>border-box显示效果如下：<br><img src="/photo/20161128/4.png" alt=""><br>padding-box显示效果如下：<br><img src="/photo/20161128/5.png" alt=""><br>content-box显示效果如下：<br><img src="/photo/20161128/6.png" alt=""></p>
+</li>
+</ul>
+</li>
+<li>background-size：<ul>
+<li>cover属性：把背景图片扩展足够大，使背景图片完全覆盖背景区域</li>
+<li>contain属性：把背景图片扩展至最大尺寸，以使其宽度和高度完全适应内容区域</li>
+</ul>
+</li>
+</ul>
+<h1 id="CSS边框属性（border）"><a href="#CSS边框属性（border）" class="headerlink" title="CSS边框属性（border）"></a>CSS边框属性（border）</h1><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>可能值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>border</td>
+<td>在一个声明中设置所有的边框属性</td>
+<td>medium double red</td>
+</tr>
+<tr>
+<td>border-color</td>
+<td>设置四条边框的颜色</td>
+<td>red；#ff0000；rgb(255, 0, 0)</td>
+</tr>
+<tr>
+<td>border-style</td>
+<td>设置四条边框的样式</td>
+<td>none(默认值)；hidden；dotted；dashed；solid</td>
+</tr>
+<tr>
+<td>border-width</td>
+<td>设置四条边框的宽度</td>
+<td>medium(默认值)；thin, thick, 50px, inherit</td>
+</tr>
+<tr>
+<td>border-image</td>
+<td>在一个声明中设置边框图像属性</td>
+<td>none 100% 1 0 stretch(默认值)</td>
+</tr>
+<tr>
+<td>border-radius</td>
+<td>设置边框四个圆角属性</td>
+<td>2em 4em, 50% 50%</td>
+</tr>
+<tr>
+<td>border-shadow</td>
+<td>设置边框阴影</td>
+<td>h-shadow, v-shadow</td>
+</tr>
+<tr>
+<td>border-top</td>
+<td>在一个声明中设置所有的上边框属性</td>
+<td>medium double red</td>
+</tr>
+<tr>
+<td>border-top-color</td>
+<td>设置上边框的颜色</td>
+<td>red；#ff0000；rgb(255, 0, 0)</td>
+</tr>
+<tr>
+<td>border-top-style</td>
+<td>设置上边框的样式</td>
+<td>none(默认值)；hidden；dotted；dashed；solid</td>
+</tr>
+<tr>
+<td>border-top-width</td>
+<td>设置上边框的宽度</td>
+<td>medium(默认值)；thin, thick, 50px, inherit</td>
+</tr>
+</tbody>
+</table>
+<p>注：</p>
+<ul>
+<li>border：在一个声明中设置边框属性，可以按顺序设置如下属性：<ul>
+<li>border-width</li>
+<li>border-style</li>
+<li>border-color</li>
+</ul>
+</li>
+<li>border-image：在一个声明中设置边框图像属性，可以按顺序设置如下属性：<ul>
+<li>border-image-source：用于设置边框图片的路径，<code>url(&#39;1.jpg&#39;)</code></li>
+<li>border-image-slice：设置图片边框向内偏移</li>
+<li>border-image-width：设置图片边框宽度</li>
+<li>border-image-outset：设置图片超出边框的量</li>
+<li>border-image-repeat：设置图片边框是平铺<code>repeated</code>，铺满<code>rounded</code>或拉伸<code>streched</code></li>
+</ul>
+</li>
+<li>border-width：<ul>
+<li>四个边框宽度是不同的值：<code>border-width: thin medium thick 10px;</code>即上边框thin，右边框medium，下边框thick，左边框10px</li>
+<li>上下边框不同，左右边框相同：<code>border-width: thin  medium thick;</code>即上边框thin，右左边框medium，下边看thick</li>
+<li>上下边框相同，左右边框相同：<code>border-width: thin medium;</code>即上下边框thin，左右边框medium</li>
+<li>上下左右边框相同：<code>border-width: thin;</code>即上下左右边框全为thin</li>
+</ul>
+</li>
+<li>border-radius：<ul>
+<li>提供了四个参数值，将按上左、上右、下右、下左顺序作用于四个角</li>
+<li>提供了一个参数值，将用于四个角</li>
+<li>提供了两个参数值，第一个用于上左、下右，第二个用于上右、下左</li>
+<li>提供了三个参数值，第一个用于上左，第二个用于上右、下左，第三个用于下右</li>
+</ul>
+</li>
+</ul>
+<h1 id="CSS文本属性（Text）"><a href="#CSS文本属性（Text）" class="headerlink" title="CSS文本属性（Text）"></a>CSS文本属性（Text）</h1><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>可能值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color</td>
+<td>设置文本的颜色</td>
+<td>red, rgb(255, 0, 0), #fff000</td>
+</tr>
+<tr>
+<td>direction</td>
+<td>设置文本的方向</td>
+<td>ltr(默认), rtl, inherit</td>
+</tr>
+<tr>
+<td>letter-spacing</td>
+<td>设置字符间距</td>
+<td>normal(默认), 4px, inherit</td>
+</tr>
+<tr>
+<td>line-height</td>
+<td>设置行高</td>
+<td>normal(默认), 4px, inherit</td>
+</tr>
+<tr>
+<td>text-align</td>
+<td>设置文本水平对齐方式</td>
+<td>left, right, center, justify, inherit</td>
+</tr>
+<tr>
+<td>text-decoration</td>
+<td>设置文本的装饰效果</td>
+<td>none, overline, underline, blink</td>
+</tr>
+<tr>
+<td>text-indent</td>
+<td>设置文本块首行的缩进</td>
+<td>10px, 10%, ecah-line</td>
+</tr>
+<tr>
+<td>text-shadow</td>
+<td>设置文本的阴影效果</td>
+<td>h-shadow, v-shadow</td>
+</tr>
+<tr>
+<td>text-transform</td>
+<td>控制文本的大小写</td>
+<td>uppercase, lowercase, captitalize</td>
+</tr>
+<tr>
+<td>white-spacing</td>
+<td>规定如何处理元素中的空白</td>
+<td>normal, nowrap, pre-line, pre, pre-wrap</td>
+</tr>
+<tr>
+<td>word-spacing</td>
+<td>设置单词间距</td>
+<td>normal, 10px, inherit</td>
+</tr>
+<tr>
+<td>text-justify</td>
+<td>规定text-align为justify时的对其方法</td>
+<td>auto, none, inter-word</td>
+</tr>
+<tr>
+<td>word-break</td>
+<td>设置文本的换行规则</td>
+<td>normal, break-all, keep-all</td>
+</tr>
+<tr>
+<td>word-wrap</td>
+<td>允许对唱的不可分割的单词进行分割并换行到下一行</td>
+<td>normal, break-word</td>
+</tr>
+</tbody>
+</table>
+<p>注：</p>
+<ul>
+<li>white-space<ul>
+<li>normal：默认处理方式</li>
+<li>nowrap：合并多余空格，强制不换行，直到碰到<code>&lt;br&gt;</code></li>
+<li>pre-line：合并多余空格，碰到边框自动换行</li>
+<li>pre：不合并多余空格，碰到边界不换行</li>
+<li>pre-wrap：不合并多余空格，碰到边界换行</li>
+</ul>
+</li>
+<li>word-wrap<ul>
+<li>normal：允许内容顶开或溢出指定容器的边界</li>
+<li>break-word：内容将在边界内换行，如果需要，单词内部允许断行</li>
+</ul>
+</li>
+</ul>
+<h1 id="CSS字体属性（font）"><a href="#CSS字体属性（font）" class="headerlink" title="CSS字体属性（font）"></a>CSS字体属性（font）</h1><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>可能值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>font</td>
+<td>在一个声明中设置字体属性</td>
+<td>italic bold 12px/20px arial,sans-serif;</td>
+</tr>
+<tr>
+<td>font-family</td>
+<td>规定字体系列</td>
+<td>Times New Roman等</td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>设置字体的尺寸</td>
+<td>6px, 20%, inherit, smaller, larger</td>
+</tr>
+<tr>
+<td>font-weight</td>
+<td>设置字体的粗细</td>
+<td>normal, bold, bolder, lighter, 100</td>
+</tr>
+<tr>
+<td>font-style</td>
+<td>设置字体的样式</td>
+<td>normal, italic, oblique, inherit</td>
+</tr>
+</tbody>
+</table>
+<h1 id="CSS外边距属性（Margin）"><a href="#CSS外边距属性（Margin）" class="headerlink" title="CSS外边距属性（Margin）"></a>CSS外边距属性（Margin）</h1><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>可能值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>margin</td>
+<td>在一个声明中设置所有外边距</td>
+<td>1-4个值</td>
+</tr>
+<tr>
+<td>margin-bottom</td>
+<td>设置元素的下外边距</td>
+<td>auto, 10px, 5%, inherit</td>
+</tr>
+<tr>
+<td>margin-top</td>
+<td>设置元素的上外边距</td>
+<td>auto, 10px, 5%, inherit</td>
+</tr>
+<tr>
+<td>margin-left</td>
+<td>设置元素的左外边距</td>
+<td>auto, 10px, 5%, inherit</td>
+</tr>
+<tr>
+<td>margin-right</td>
+<td>设置元素的右外边距</td>
+<td>auto, 10px, 5%, inherit</td>
+</tr>
+</tbody>
+</table>
+<h1 id="CSS内边距属性（Padding）"><a href="#CSS内边距属性（Padding）" class="headerlink" title="CSS内边距属性（Padding）"></a>CSS内边距属性（Padding）</h1><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>可能值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>padding</td>
+<td>在一个声明中设置所有内边距</td>
+<td>1-4个值</td>
+</tr>
+<tr>
+<td>padding-bottom</td>
+<td>设置元素的下内边距</td>
+<td>auto, 10px, 5%, inherit</td>
+</tr>
+<tr>
+<td>padding-top</td>
+<td>设置元素的上内边距</td>
+<td>auto, 10px, 5%, inherit</td>
+</tr>
+<tr>
+<td>padding-left</td>
+<td>设置元素的左内边距</td>
+<td>auto, 10px, 5%, inherit</td>
+</tr>
+<tr>
+<td>padding-right</td>
+<td>设置元素的右内边距</td>
+<td>auto, 10px, 5%, inherit</td>
+</tr>
+</tbody>
+</table>
+<h1 id="CSS尺寸属性（Dimension）"><a href="#CSS尺寸属性（Dimension）" class="headerlink" title="CSS尺寸属性（Dimension）"></a>CSS尺寸属性（Dimension）</h1><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>可能值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>height</td>
+<td>设置元素的高度</td>
+<td>auto, 10px, 5%, inherit</td>
+</tr>
+<tr>
+<td>width</td>
+<td>设置元素的宽度</td>
+<td>auto, 10px, 5%, inherit</td>
+</tr>
+<tr>
+<td>max-width</td>
+<td>设置元素最大宽度</td>
+<td>auto, 10px, 5%, inherit</td>
+</tr>
+<tr>
+<td>min-width</td>
+<td>设置元素最小宽度</td>
+<td>auto, 10px, 5%, inherit</td>
+</tr>
+<tr>
+<td>max-height</td>
+<td>设置元素最大高度</td>
+<td>auto, 10px, 5%, inherit</td>
+</tr>
+<tr>
+<td>min-height</td>
+<td>设置元素最小高度</td>
+<td>auto, 10px, 5%, inherit</td>
+</tr>
+</tbody>
+</table>
+<h1 id="CSS定位属性（Position）"><a href="#CSS定位属性（Position）" class="headerlink" title="CSS定位属性（Position）"></a>CSS定位属性（Position）</h1><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>可能值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clear</td>
+<td>规定元素的哪一侧不允许其他浮动元素</td>
+<td>none, left, right, both</td>
+</tr>
+<tr>
+<td>float</td>
+<td>规定元素的浮动方式</td>
+<td>none, left, right</td>
+</tr>
+<tr>
+<td>cursor</td>
+<td>规定显示的光标形状</td>
+<td>auto, pointer, help</td>
+</tr>
+<tr>
+<td>position</td>
+<td>规定元素的定位类型</td>
+<td>absolute, fixed, relative, static, inherit</td>
+</tr>
+<tr>
+<td>display</td>
+<td>规定元素的显示类型</td>
+<td>none, block, inline, inline-block, table…</td>
+</tr>
+<tr>
+<td>visibility</td>
+<td>规定元素是否可见</td>
+<td>visible, hidden</td>
+</tr>
+<tr>
+<td>vertical-align</td>
+<td>设置元素垂直对齐</td>
+<td>top, middle, bottom, baseline…</td>
+</tr>
+</tbody>
+</table>
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="http://www.w3school.com.cn/cssref/index.asp" target="_blank" rel="external">CSS参考手册</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/css/" rel="tag">#css</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/23/node-learn1/" rel="next" title="Node入门(一)">
+                <i class="fa fa-chevron-left"></i> Node入门(一)
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/06/vue自定义指令/" rel="prev" title="Vue自定义指令">
+                Vue自定义指令 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/11/28/css属性/"
+     data-title="常用CSS属性"
+     data-content=""
+     data-url="http://yoursite.com/2016/11/28/css属性/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/11/28/css属性/"
+           data-title="常用CSS属性" data-url="http://yoursite.com/2016/11/28/css属性/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Suyd" />
+          <p class="site-author-name" itemprop="name">Suyd</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS背景属性（background）"><span class="nav-number">1.</span> <span class="nav-text">CSS背景属性（background）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS边框属性（border）"><span class="nav-number">2.</span> <span class="nav-text">CSS边框属性（border）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS文本属性（Text）"><span class="nav-number">3.</span> <span class="nav-text">CSS文本属性（Text）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS字体属性（font）"><span class="nav-number">4.</span> <span class="nav-text">CSS字体属性（font）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS外边距属性（Margin）"><span class="nav-number">5.</span> <span class="nav-text">CSS外边距属性（Margin）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS内边距属性（Padding）"><span class="nav-number">6.</span> <span class="nav-text">CSS内边距属性（Padding）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS尺寸属性（Dimension）"><span class="nav-number">7.</span> <span class="nav-text">CSS尺寸属性（Dimension）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS定位属性（Position）"><span class="nav-number">8.</span> <span class="nav-text">CSS定位属性（Position）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">9.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Suyd</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"myBlogSuyd"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+  
+
+  
+
+  
+
+</body>
+</html>
